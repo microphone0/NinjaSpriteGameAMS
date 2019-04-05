@@ -208,6 +208,10 @@ class GameScene: SKScene {
     // 6 - Get the direction of where to shoot
     let direction = offset.normalized()
     
+    //Rotate projectile to make it look nicer
+    let mathStuff = offset.y/offset.x
+    projectile.zRotation = atan(mathStuff)
+    
     // 7 - Make it shoot far enough to be guaranteed off screen
     let shootAmount = direction * 1000
     
@@ -215,7 +219,7 @@ class GameScene: SKScene {
     let realDest = shootAmount + projectile.position
     
     // 9 - Create the actions
-    let actionMove = SKAction.move(to: realDest, duration: 2.0)
+    let actionMove = SKAction.move(to: realDest, duration: 1.0)
     let actionMoveDone = SKAction.removeFromParent()
     projectile.run(SKAction.sequence([actionMove, actionMoveDone]))
   }
