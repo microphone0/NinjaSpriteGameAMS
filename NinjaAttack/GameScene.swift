@@ -108,7 +108,7 @@ class GameScene: SKScene {
     
     // 3
     player.zPosition = 1
-    player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
+    player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.1)
     // 4
     addChild(player)
     
