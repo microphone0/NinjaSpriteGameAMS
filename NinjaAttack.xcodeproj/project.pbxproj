@@ -13,7 +13,8 @@
 		AFD63F8F203649F800E08C66 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = AFD63F8D203649F800E08C66 /* background-music-aac.caf */; };
 		AFD63F90203649F800E08C66 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = AFD63F8E203649F800E08C66 /* pew-pew-lei.caf */; };
 		B501081F2257B22000395B99 /* Explosion+3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B501081E2257B22000395B99 /* Explosion+3.mp3 */; };
-		B50108212257B22F00395B99 /* Fireball+2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B50108202257B22F00395B99 /* Fireball+2.mp3 */; };
+		B50108232257BE9000395B99 /* Komiku_Battle_of_Pogs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B50108222257BE9000395B99 /* Komiku_Battle_of_Pogs.mp3 */; };
+		B50108252257C8FC00395B99 /* Fireball+2.wav in Resources */ = {isa = PBXBuildFile; fileRef = B50108242257C8FC00395B99 /* Fireball+2.wav */; };
 		B5968C112254F1860013DEA8 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5968C102254F1860013DEA8 /* GameOverScene.swift */; };
 		D2A5F2091F4A9144005CD714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F2071F4A9144005CD714 /* Main.storyboard */; };
 		D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F20A1F4A9144005CD714 /* Assets.xcassets */; };
@@ -27,7 +28,8 @@
 		AFD63F8D203649F800E08C66 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
 		AFD63F8E203649F800E08C66 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
 		B501081E2257B22000395B99 /* Explosion+3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Explosion+3.mp3"; sourceTree = "<group>"; };
-		B50108202257B22F00395B99 /* Fireball+2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Fireball+2.mp3"; sourceTree = "<group>"; };
+		B50108222257BE9000395B99 /* Komiku_Battle_of_Pogs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Komiku_Battle_of_Pogs.mp3; sourceTree = "<group>"; };
+		B50108242257C8FC00395B99 /* Fireball+2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Fireball+2.wav"; sourceTree = "<group>"; };
 		B5968C102254F1860013DEA8 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		D2A5F2001F4A9144005CD714 /* NinjaAttack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NinjaAttack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A5F2081F4A9144005CD714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +52,8 @@
 		AFD63F8C203649F800E08C66 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				B50108202257B22F00395B99 /* Fireball+2.mp3 */,
+				B50108222257BE9000395B99 /* Komiku_Battle_of_Pogs.mp3 */,
+				B50108242257C8FC00395B99 /* Fireball+2.wav */,
 				B501081E2257B22000395B99 /* Explosion+3.mp3 */,
 				AFD63F8D203649F800E08C66 /* background-music-aac.caf */,
 				AFD63F8E203649F800E08C66 /* pew-pew-lei.caf */,
@@ -158,8 +161,9 @@
 				D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */,
 				5C2901831F8F6DE700803663 /* LaunchScreen.storyboard in Resources */,
 				AFD63F90203649F800E08C66 /* pew-pew-lei.caf in Resources */,
-				B50108212257B22F00395B99 /* Fireball+2.mp3 in Resources */,
+				B50108252257C8FC00395B99 /* Fireball+2.wav in Resources */,
 				B501081F2257B22000395B99 /* Explosion+3.mp3 in Resources */,
+				B50108232257BE9000395B99 /* Komiku_Battle_of_Pogs.mp3 in Resources */,
 				D2A5F2091F4A9144005CD714 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -35,6 +35,9 @@ struct PhysicsCategory {
   static let projectile: UInt32 = 0b10      // 2
 }
 
+//Used for mod to spawn more enemies
+var n = 30
+
 extension GameScene: SKPhysicsContactDelegate {
   func didBegin(_ contact: SKPhysicsContact) {
     // 1
@@ -97,11 +100,9 @@ class GameScene: SKScene {
   var background = SKSpriteNode(imageNamed: "background")
   
   var monstersDestroyed = 0
+  var score: SKLabelNode!
   
   override func didMove(to view: SKView) {
-    // 2
-    backgroundColor = SKColor.white
-    
     background.zPosition = 0
     background.position = CGPoint(x: frame.size.width/2, y: frame.size.height/2)
     addChild(background)
@@ -122,9 +123,16 @@ class GameScene: SKScene {
         ])
     ))
     
-    let backgroundMusic = SKAudioNode(fileNamed: "background-music-aac.caf")
+    let backgroundMusic = SKAudioNode(fileNamed: "Komiku_Battle_of_Pogs.mp3")
     backgroundMusic.autoplayLooped = true
     addChild(backgroundMusic)
+    
+    score = SKLabelNode(fontNamed: "Chalkduster")
+    score.text = "Score: \(monstersDestroyed)"
+    score.fontColor = UIColor.black
+    score.fontSize = 30
+    score.position = CGPoint(x: size.width * 0.1, y: size.height * 0.9)
+    addChild(score)
   }
   
   func random() -> CGFloat {
@@ -179,8 +187,8 @@ class GameScene: SKScene {
     guard let touch = touches.first else {
       return
     }
-    
-    run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
+  
+    run(SKAction.playSoundFileNamed("Fireball+2.wav", waitForCompletion: false))
 
     let touchLocation = touch.location(in: self)
     
@@ -230,11 +238,15 @@ class GameScene: SKScene {
     monster.removeFromParent()
     
     monstersDestroyed += 1
-    if monstersDestroyed > 30 {
-      let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
-      let gameOverScene = GameOverScene(size: self.size, won: true)
-      view?.presentScene(gameOverScene, transition: reveal)
+    score.text = "Score: \(monstersDestroyed)"
+    if monstersDestroyed == n {
+      //let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+      //let gameOverScene = GameOverScene(size: self.size, won: true)
+      //view?.presentScene(gameOverScene, transition: reveal)
+      for _ in 1...5 {
+        addMonster()
+        n += 30
+      }
     }
   }
-
 }
